@@ -469,6 +469,9 @@ footer {
   .products{
     flex-direction: column; 
   }
+    .cozy-item{
+    margin: 0;
+  }
 }
 @media (max-width: 567px) {
 
