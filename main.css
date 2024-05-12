@@ -451,6 +451,14 @@ footer {
   .products{
     flex-direction: column; 
   }
+    .footer-container {
+
+    font-size: 0.6rem;
+
+  }
+  footer{
+    margin: 0 50px;
+  }
 
 }
 @media (max-width: 768px) {
