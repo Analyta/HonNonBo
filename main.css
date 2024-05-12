@@ -1,0 +1,480 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poetsen+One&display=swap');
+
+
+:root {
+  --maincolor: #A71F26;
+  --contentcolor: #FFFDF3;
+}
+
+
+a{
+  text-decoration: none;
+}
+body {
+  width: 100%;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--contentcolor);
+  scroll-padding-top: 2rem;
+
+}
+
+.navbar {
+  background-color:transparent;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 10%;
+  align-items: center;
+  z-index: 10;
+}
+.button-container {
+  display: flex;
+  background-color: var(--maincolor);
+  width: 250px;
+  height: 40px;
+  position: absolute;
+  top: 10%;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
+    var(--maincolor) 5px 10px 15px;
+  transition: all 0.5s;
+}
+.button-container:hover {
+  width: 300px;
+  transition: all 0.5s;
+}
+
+.button {
+  outline: 0 !important;
+  border: 0 !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.icon {
+  font-size: 20px;
+}
+
+/* .navbar a {
+  float: left;
+  display: block;
+  color: var(--contentcolor);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: bolder;
+
+  
+}
+.nav{
+  z-index: 10;
+
+}
+.navbar a:hover {
+  color: var(--contentcolor);
+} */
+
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
+.banner,
+.collection {
+  text-align: center;
+  width: 100%;
+}
+.underline{
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  align-items: center;
+  border-top: red solid 3px;
+  position: relative;
+  left: 49%;
+  font-weight: 600;
+  margin-top: 0.68rem;
+}
+.underline-2{
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  left: 50%;
+
+  align-items: center;
+  border-top: red solid 3px;
+  position: relative;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+.collection {
+  width: 100%;
+  background-color: var(--maincolor);
+
+  text-align: center;
+  height: 360px;
+}
+
+.collection h2 {
+  font-size: 3rem;
+  top: 20%;
+  position: relative;
+  color: white;
+ 
+}
+.collection span {
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bolder;
+  margin: 40px 2px;
+  border-radius: 5px;
+  border: 4px solid #f2f2f2;
+  cursor: pointer;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  margin: 25px 0 0 0;
+}
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 30px;
+  gap: 5%;
+
+}
+/* .product img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px ;
+} */
+.card {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  flex-direction: column;
+}
+.price{
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+}
+.cart-button {
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+
+  padding: 0.5rem;
+  width: 100%;
+  background-color: var(--maincolor);
+
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--contentcolor);
+  text-wrap: nowrap;
+
+  border: 2px solid var(--maincolor);
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 0.25rem 1px var(--maincolor);
+}
+.cart-button .cart-icon {
+  width: 1rem;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: var(--maincolor);
+  background-image: url("\HNB\Content\logo HNB.png");
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+
+}
+
+.card__title {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--contentcolor);
+  font-weight: bolder;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card:hover svg {
+  scale: 0;
+}
+
+.card__description {
+  margin: 20px 0 0;
+  font-size: 1.3rem;
+  color: var(--contentcolor);
+  text-align: justify;
+  line-height: 1.4;
+  font-weight: 100;
+}
+
+
+.cozy {
+  display: flex;
+  justify-content: center;
+  padding: 20px 30px 0 30px;
+  flex-direction: column;
+
+}
+.cozy-item {
+  text-align: center;
+  margin: 20px;
+  width: 100%;
+  cursor: pointer ;
+}
+.cozy-item img {
+  width: 80%;
+  height: 80%;
+  border-radius: 8px ;
+}
+
+/* CSS cho phần "Twice as Cozy" */
+.cozy-section {
+  /* padding: 20px; */
+  background-color: var(--contentcolor);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+}
+
+.cozy-section h2 {
+  color: #333;
+  font-size: 2.5rem;
+  margin :0;
+}
+
+.cozy-section p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 20px 120px;
+  text-align: center;
+}
+
+
+
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+/* CSS cho Footer */
+footer {
+  border-top: 3px solid #ddd;
+  background-color: var(--contentcolor);
+  text-align: justify;
+  margin: 0 40px;
+  color: black;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.footer-container {
+  line-height: 1.2;
+  display: flex;
+  text-align: justify;
+  font-size: 1rem;
+
+  padding: 0 20px;
+}
+
+.footer-container div {
+  width: 33%;
+  text-align: center;
+}
+
+.footer-container h3 {
+  margin-bottom: 10px;
+}
+
+.footer-container ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-container li {
+  margin: 14px 0;
+
+}
+.footer-container ul li a {
+  color: black;
+  text-decoration: none;
+}
+.footer-contact p{
+  word-wrap: break-word;
+}
+.footer-container ul li a:hover {
+  text-decoration: underline;
+}
+
+
+.footer-bottom {
+  text-align: center;
+  background-color: var(--maincolor);
+  height: 50px;
+  margin: 0;
+  padding-top: 10px;
+  align-items: center;
+  display: grid;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: var(--contentcolor);
+
+}
+
+
+/* animation */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+
+/* .showtotop{
+  opacity: 0;
+}
+:active .showtotop{
+  animation: showtop 1s ease-in-out 1 forwards;
+} */
+ .delay-02{
+  animation-delay: 0.2s !important;
+ }
+ .delay-04{
+  animation-delay: 0.4s !important;
+ }
+ .delay-06{
+  animation-delay: 0.6s !important;
+ }
+ .delay-08{
+  animation-delay: 0.8s !important;
+ }
+/* reponsive */
+/* CSS for larger screens */
+
+
+/* CSS for smaller screens */
+
+@media (max-width: 1120px) {
+  .navbar a {
+      font-size: 1.2rem; /* Giảm kích thước font */
+  }
+
+  .navbar a {
+    padding: 10px 12px; /* Giảm padding */
+  }
+  .cozy-section h2 {
+
+    font-size: 1.5rem;
+
+  }
+  .products{
+    flex-direction: column; 
+  }
+
+}
+@media (max-width: 768px) {
+
+  .Logo {
+    display: none; /* Ẩn logo */
+  }
+  .products{
+    flex-direction: column; 
+  }
+}
+@media (max-width: 567px) {
+
+  .navbar a {
+    font-size: 1rem; /* Giảm kích thước font */
+
+}
+
+  /* .cozy-section p {
+    display: none;
+  } */
+  /* .cozy-section h2 {
+
+    font-size: 1.2rem;
+
+  } */
+}
