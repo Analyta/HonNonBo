@@ -433,8 +433,6 @@ footer {
  }
 /* reponsive */
 /* CSS for larger screens */
-
-
 @media (max-width: 1120px) {
   .navbar a {
       font-size: 1.2rem; /* Giảm kích thước font */
@@ -458,7 +456,10 @@ footer {
     
   }
   .underline {
-    left: 47%;
+    left: 49%;
+  }
+  .underline-2{
+    left: 49%;
   }
 
 }
@@ -493,8 +494,12 @@ footer {
     font-size: 1rem; 
     /* Giảm kích thước font */
 
-}
-.underline {
-  left: 46%;
-}
+  }
+  .underline {
+    left: 46%;
+  }
+  .underline-2{
+    left: 45%;
+  }
+
 }
