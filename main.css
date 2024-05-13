@@ -451,30 +451,51 @@ footer {
     font-size: 1.5rem;
 
   }
+
   .products{
     flex-direction: column; 
+    
   }
-
+  .cozy{
+    flex-direction: column; 
+    
+  }
 }
 @media (max-width: 768px) {
-
   .Logo {
     display: none; /* Ẩn logo */
   }
   .products{
     flex-direction: column; 
   }
+  .product{
+    margin-bottom: 40px;
+  }
+  .cozy-item{
+    margin: 0;
+  }
+  .footer-container {
+
+    font-size: 0.6rem;
+
+  }
+  footer{
+    margin: 0 50px;
+  }
 }
 @media (max-width: 567px) {
 
   .navbar a {
-    font-size: 1rem; /* Giảm kích thước font */
+    font-size: 1rem; 
+    /* Giảm kích thước font */
 
 }
+.cozy-section{
+  width: 90% !important;
+}
 
-  /* .cozy-section p {
-    display: none;
-  } */
+
+
   /* .cozy-section h2 {
 
     font-size: 1.2rem;
