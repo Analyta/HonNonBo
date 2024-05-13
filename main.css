@@ -1,86 +1,38 @@
-
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poetsen+One&display=swap');
-
-
 :root {
-  --maincolor: #A71F26;
-  --contentcolor: #FFFDF3;
+  --maincolor: #184374;
+  --contentcolor: #FFFFFF;
+  --hovercolor: #02AAD8;
 }
-
-
 a{
   text-decoration: none;
 }
 body {
   width: 100%;
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: var(--contentcolor);
-  scroll-padding-top: 2rem;
+
 
 }
 
 .navbar {
-  background-color:transparent;
+  background-color:var(--maincolor);
   overflow: hidden;
   display: flex;
   justify-content: center;
   padding-top: 10px;
   top: 0;
-  position: fixed;
+  position: sticky;
   width: 100%;
-  height: 10%;
+  height: auto;
   align-items: center;
   z-index: 10;
-}
-.button-container {
-  display: flex;
-  background-color: var(--maincolor);
-  width: 250px;
-  height: 40px;
-  position: absolute;
-  top: 10%;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
-    var(--maincolor) 5px 10px 15px;
-  transition: all 0.5s;
-}
-.button-container:hover {
-  width: 300px;
-  transition: all 0.5s;
+
 }
 
-.button {
-  outline: 0 !important;
-  border: 0 !important;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  transition: all ease-in-out 0.3s;
-  cursor: pointer;
-}
-
-.button:hover {
-  transform: translateY(-3px);
-}
-
-.icon {
-  font-size: 20px;
-}
-
-/* .navbar a {
+.navbar a {
   float: left;
   display: block;
   color: var(--contentcolor);
@@ -90,7 +42,7 @@ body {
   justify-content: center;
   font-size: 1.6rem;
   font-weight: bolder;
-
+  background-color: var(--maincolor);
   
 }
 .nav{
@@ -98,9 +50,31 @@ body {
 
 }
 .navbar a:hover {
-  color: var(--contentcolor);
-} */
+  
+  border-bottom: var(--contentcolor) solid 3px;
+  /* font-weight: bold; */
 
+}
+
+.Logo{
+  position: relative;
+  left: 12%;
+  /* display: flex;
+  justify-content: right;
+  width: 80%; */
+  /* padding: 20px;
+  margin: 0 24px; */
+  border-color: var(--contentcolor) solid 1px;
+
+}
+.Logo img{
+  background-color: transparent;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  align-items: self-start;
+  
+}
 .banner img {
   width: 100%;
   height: 100%;
@@ -116,7 +90,7 @@ body {
   justify-content: center;
   width: 30px;
   align-items: center;
-  border-top: red solid 3px;
+  border-top: var(--hovercolor) solid 3px;
   position: relative;
   left: 49%;
   font-weight: 600;
@@ -126,10 +100,8 @@ body {
   display: flex;
   justify-content: center;
   width: 30px;
-  left: 50%;
-
   align-items: center;
-  border-top: red solid 3px;
+  border-top: var(--hovercolor) solid 3px;
   position: relative;
   font-weight: 600;
   margin: 0.5rem 0;
@@ -146,22 +118,22 @@ body {
   font-size: 3rem;
   top: 20%;
   position: relative;
-  color: var(--contentcolor);
+  color: white;
  
 }
-.collection span {
-  color: var(--contentcolor);
-  padding: 10px 20px;
+/* .collection span {
+  color: white;
+  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 60px 2px;
+  font-size: 2rem;
+  font-weight: bolder;
+  margin: 40px 2px;
   border-radius: 5px;
-  border: 4px solid var(--contentcolor);
+  border: 4px solid #f2f2f2;
   cursor: pointer;
-}
+} */
 h1 {
   display: flex;
   justify-content: center;
@@ -173,35 +145,138 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 16px 30px;
-  gap: 5%;
+  margin: 16px 50px;
+  gap: 2%;
 
 }
-/* .product img {
+.product img {
   width: 100%;
   height: 100%;
+  max-width: 320px;
+  /* object-fit: cover; */
   border-radius: 8px ;
+}
+/* .product span {
+  color: tomato;
 } */
 .card {
+  --bg-card:  #184374;
+  --primary: var(--hovercolor);
+  --primary-800: var(--light);
+  --primary-shadow: var(--hovercolor);
+  --light: #d9d9d9;
+  --zinc-800: #18181b;
+  --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
+
   position: relative;
-  width: 400px;
-  height: 400px;
-  background-color: #f2f2f2;
-  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  padding: 1rem;
+
+  background-color: var(--bg-card);
+
+  border-radius: 1rem;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+.image_container {
+  overflow: hidden;
+  cursor: pointer;
+
+  position: relative;
+  z-index: 5;
+
+
+
+  background-color: transparent;
+
+  border-radius: 0.5rem;
+}
+
+.image_container .image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3rem;
+  fill: var(--light);
+}
+
+.title {
+  overflow: clip;
+
+  width: 100%;
+
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--light);
+  text-transform: capitalize;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+}
+
+.size {
+  font-size: 0.75rem;
+  color: var(--light);
+}
+
+.list-size {
   display: flex;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  perspective: 1000px;
-  box-shadow: 0 0 0 5px #ffffff80;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  flex-direction: column;
+  gap: 0.25rem;
+
+  margin-top: 0.25rem;
 }
-.price{
-  position: absolute;
-  right: 5%;
-  bottom: 5%;
+
+.list-size .item-list {
+  list-style: none;
 }
+
+.list-size .item-list-button {
+  cursor: pointer;
+
+  padding: 0.5rem;
+  background-color: var(--zinc-800);
+
+  font-size: 0.75rem;
+  color: var(--light);
+
+  border: 2px solid var(--zinc-800);
+  border-radius: 0.25rem;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.item-list-button:hover {
+  border: 2px solid var(--light);
+}
+.item-list-button:focus {
+  background-color: var(--primary);
+
+  border: 2px solid var(--primary-shadow);
+
+  box-shadow: inset 0px 1px 4px var(--primary-shadow);
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--light);
+}
+
 .cart-button {
   cursor: pointer;
 
@@ -211,83 +286,38 @@ h1 {
   gap: 0.25rem;
 
   padding: 0.5rem;
-  width: 100%;
-  background-color: var(--maincolor);
+  width: 40%;
+  background-image: var(--bg-linear);
 
-  font-size: 1rem;
-  font-weight: 800;
-  color: var(--contentcolor);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--light);
   text-wrap: nowrap;
 
-  border: 2px solid var(--maincolor);
+  border: 2px solid hsla(199, 80%, 55%, 0.5);
   border-radius: 0.5rem;
-  box-shadow: inset 0 0 0.25rem 1px var(--maincolor);
+  box-shadow: inset 0 0 0.25rem 1px var(--light);
 }
 .cart-button .cart-icon {
-  width: 1rem;
+  width: 2rem;
 }
-.card img {
-  width: 100%;
-  height: 100%;
-  fill: #333;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+/* Ẩn bảng size của product thứ 3 */
+.product:nth-child(3) .size {
+  visibility: hidden;
 }
 
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+/* Ẩn bảng size của product thứ 4 */
+.product:nth-child(4) .size {
+  visibility: hidden;
 }
 
-.card__content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: var(--maincolor);
-  background-image: url("\HNB\Content\logo HNB.png");
-  transform: rotateX(-90deg);
-  transform-origin: bottom;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
 
-.card:hover .card__content {
-  transform: rotateX(0deg);
-
-}
-
-.card__title {
-  margin: 0;
-  font-size: 2rem;
-  color: var(--contentcolor);
-  font-weight: bolder;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-.card:hover svg {
-  scale: 0;
-}
-
-.card__description {
-  margin: 20px 0 0;
-  font-size: 1.3rem;
-  color: var(--contentcolor);
-  text-align: justify;
-  line-height: 1.4;
-  font-weight: 100;
-}
 
 
 .cozy {
   display: flex;
   justify-content: center;
-  padding: 20px 30px 0 30px;
-  flex-direction: column;
-
+  padding: 20px 30px;
 }
 .cozy-item {
   text-align: center;
@@ -299,38 +329,132 @@ h1 {
   width: 80%;
   height: 80%;
   border-radius: 8px ;
-}
-.cozy-item p {
-font-size: 1.3rem;
-}
+  filter: grayscale(1);
+  transition: 0.2s;
 
+}
+.cozy-item :hover{
+  filter: grayscale(0);
+}
 /* CSS cho phần "Twice as Cozy" */
 .cozy-section {
-  /* padding: 20px; */
-  background-color: var(--contentcolor);
-  text-align: center;
-  width: 100%;
-  height: 100%;
-
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: left;
+  min-width: 20%;
+  height: 20%;
 }
 
 .cozy-section h2 {
   color: #333;
   font-size: 2.5rem;
-  margin :0;
+  margin-bottom: 20px;
 }
 
 .cozy-section p {
   color: #666;
   font-size: 16px;
   line-height: 1.6;
-  margin: 20px 120px;
-  text-align: center;
+  margin-bottom: 20px;
 }
 
+/* aniation buton */
+.animated-button {
+  position: relative;
+  top: 16%;
+  left: 45%;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: var(--hovercolor);
+  box-shadow: 0 0 0 2px var(--hovercolor);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: var(--hovercolor);
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--hovercolor);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #212121;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px var(--hovercolor);
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+/*  */
 
 
-
+.product,
+.cozy-item {
+  text-align: center;
+}
 .footer {
   background-color: #333;
   color: white;
@@ -340,20 +464,18 @@ font-size: 1.3rem;
 /* CSS cho Footer */
 footer {
   border-top: 3px solid #ddd;
-  background-color: var(--contentcolor);
-  text-align: justify;
-  margin: 0 40px;
+  background-color: white;
+  margin: 0 120px;
+
   color: black;
   padding: 20px 0;
   font-size: 14px;
 }
 
 .footer-container {
-  line-height: 1.2;
+  line-height: 1.4;
   display: flex;
-  text-align: justify;
   font-size: 1rem;
-
   padding: 0 20px;
 }
 
@@ -378,14 +500,13 @@ footer {
   color: black;
   text-decoration: none;
 }
-.footer-contact p{
-  word-wrap: break-word;
-}
+
 .footer-container ul li a:hover {
   text-decoration: underline;
 }
-
-
+.footer-contact p{
+  word-wrap: break-word;
+}
 .footer-bottom {
   text-align: center;
   background-color: var(--maincolor);
@@ -399,9 +520,7 @@ footer {
 .footer-bottom p {
   margin: 0;
   color: var(--contentcolor);
-
 }
-
 
 /* animation */
 .fade-in {
@@ -460,6 +579,10 @@ footer {
     flex-direction: column; 
     
   }
+  .underline {
+    left: 47%;
+  }
+
 }
 @media (max-width: 768px) {
   .Logo {
@@ -470,6 +593,9 @@ footer {
   }
   .product{
     margin-bottom: 40px;
+  }
+  .cozy-section{
+    width: 90% !important;
   }
   .cozy-item{
     margin: 0;
@@ -482,6 +608,12 @@ footer {
   footer{
     margin: 0 50px;
   }
+  .animated-button {
+    
+    top: 15%;
+    left: 41%;
+}
+
 }
 @media (max-width: 567px) {
 
@@ -493,8 +625,14 @@ footer {
 .cozy-section{
   width: 90% !important;
 }
-
-
+.underline {
+  left: 46%;
+}
+.animated-button {
+    
+  top: 15%;
+  left: 35%;
+}
 
   /* .cozy-section h2 {
 
