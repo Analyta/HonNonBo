@@ -442,11 +442,12 @@ footer {
     padding: 10px 12px; /* Giảm padding */
   }
   .cozy-section h2 {
-
     font-size: 1.5rem;
-
+    margin: 20px 40px;
   }
-
+  .cozy-section p{
+    margin: 20px 40px;
+  }
   .products{
     flex-direction: column; 
     
