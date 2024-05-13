@@ -473,6 +473,7 @@ footer {
   }
   .product{
     margin-bottom: 40px;
+ 
   }
 
   .cozy-item{
@@ -495,6 +496,9 @@ footer {
     font-size: 1rem; 
     /* Giảm kích thước font */
 
+  }
+  .product{
+    margin: 0 30px;
   }
   .underline {
     left: 46%;
