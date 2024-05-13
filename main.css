@@ -300,6 +300,9 @@ h1 {
   height: 80%;
   border-radius: 8px ;
 }
+.cozy-item p {
+font-size: 1.3rem;
+}
 
 /* CSS cho phần "Twice as Cozy" */
 .cozy-section {
